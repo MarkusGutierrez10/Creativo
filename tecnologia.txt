@@ -1,0 +1,9 @@
+Lenguajes a usar:
+- html
+- css
+- javascript
+- three.js
+- bootstrap
+- flask, django, node.js
+- base de datos (mysql, oracle, MariaDB, PostgreSQL Databases)
+- 
