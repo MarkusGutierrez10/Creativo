@@ -7,3 +7,5 @@ Lenguajes a usar:
 - flask, django, node.js
 - base de datos (mysql, oracle, MariaDB, PostgreSQL Databases)
 - 
+
+1 semana
