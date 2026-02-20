@@ -55,7 +55,7 @@ body {
 
 /* Carrusel */
 .carousel-container {
-    max-width: 1100px; /* Ancho máximo del carrusel */
+    max-width: 1000px; /* Ancho máximo del carrusel */
 }
 
 .carousel-item img {
@@ -75,3 +75,4 @@ body {
     .carousel-item img { height: 300px; }
     .menu-capsula { border-radius: 20px; }
 }
+
