@@ -76,3 +76,62 @@ body {
     .menu-capsula { border-radius: 20px; }
 }
 
+#Containerinfo{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    height: auto;
+    width: 70%;
+    background-color: #0099cc56;
+    border-radius: 80px;
+    box-shadow: 5px 5px 5px black;
+}
+
+#subtitulodescripcion{
+    text-align: center;
+    font-style: italic;
+    text-shadow: 2px 2px solid black;
+    margin-bottom: 10px;
+}
+
+#containericonos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 10%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    height: 250px;
+    width: 90%;
+}
+#containericono1{
+    border: 1px solid black;
+    width: 30%;
+    height: 80%;
+    border-radius: 30px;
+    background-image: url(../img/gifcamisa.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#containericono1:hover{
+    cursor: pointer;
+}
+#containericono2{
+    border: 1px solid black;
+    width: 30%;
+    height: 80%;
+    border-radius: 30px;
+    background-image: url(../img/gifmoto.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#containericono2:hover{
+    cursor: pointer;
+}
+#parrafodescripcion{
+    text-align: center;
+}
+
