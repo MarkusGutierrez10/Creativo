@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creativo | Personalizador Pro</title>
+    
+    <link rel="stylesheet" href="{{url_for('static', filename='frontend/style/personalizacion3D.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+</head>
+<body>
+
+    <div class="main-container">
+        <section class="visualizador">
+            <h1 class="logo-titulo">Creativo 3D</h1>
+            <div class="visor-contenedor">
+                <model-viewer 
+                    id="camisa3D"
+                    src="{{url_for('static', filename='frontend/graficos3D/camisa.glb')}}" 
+                    camera-controls 
+                    shadow-intensity="1"
+                    environment-image="neutral"
+                    auto-rotate>
+                </model-viewer>
+            </div>
+        </section>
+
+        <section class="controles-panel">
+            <h2>Panel de Diseño</h2>
+            <hr>
+
+            <div class="control-group">
+                <label class="label-titulo">Color de la Camiseta</label>
+                <div class="color-picker-wrapper">
+                    <input type="color" id="colorPicker" value="#ffffff" oninput="cambiarColorCamisa(this.value)">
+                    <div class="picker-info">
+                        <small>Elige cualquier color de la paleta</small>
+                        <b id="hexCode">#FFFFFF</b>
+                    </div>
+                </div>
+
+                <div class="paleta-sugerida">
+                    <div class="color-btn" style="background:#ffffff" onclick="actualizarTodo('#ffffff')"></div>
+                    <div class="color-btn" style="background:#000000" onclick="actualizarTodo('#000000')"></div>
+                    <div class="color-btn" style="background:#ff0000" onclick="actualizarTodo('#ff0000')"></div>
+                    <div class="color-btn" style="background:#1a5276" onclick="actualizarTodo('#1a5276')"></div>
+                    <div class="color-btn" style="background:#f1c40f" onclick="actualizarTodo('#f1c40f')"></div>
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="label-titulo">Acomoda tu Estampado</label>
+                <div id="canvas-wrapper">
+                    <canvas id="logoCanvas" width="250" height="250"></canvas>
+                </div>
+                
+                <div class="button-grid">
+                    <label class="btn-subir">
+                        Subir Imagen <input type="file" id="upload-image" accept="image/*">
+                    </label>
+                    <button class="btn-rojo" id="btn-borrar">Borrar</button>
+                </div>
+            </div>
+
+            <button onclick="actualizarLogoEn3D()" class="btn-final">Actualizar en Camisa</button>
+        </section>
+    </div>
+
+    <script src="{{url_for('static', filename='backend/javascript/personalizacion3D.js')}}"></script>
+</body>
+</html>
