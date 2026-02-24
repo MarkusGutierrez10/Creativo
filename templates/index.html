@@ -1,149 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creativo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Creativo | Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='frontend/style/index.css')}}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 <body>
-    <!-- Navbar (menu flotante)-->
+
     <nav class="navbar navbar-expand-lg mt-3">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" alt="Logo" height="50">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+            <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" height="50"></a>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="menu-capsula mx-auto d-lg-flex align-items-center">
                     <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">tienda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Personalizaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="">Personalizaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                     </ul>
-                    
                     <div class="d-flex align-items-center ms-lg-3 gap-2">
-                        <a href="#" class="btn btn-login">Login</a>
-                        <a href="#" class="nav-link fw-bold">Register</a>
-                        <a href="#" class="nav-link ms-2"><i class="bi bi-search"></i></a>
+                        <a href="/login" class="btn-login-nav">Login</a>
                     </div>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Carrusel de bienvenida -->
-    
-    <div class="container carousel-container">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></button>
-            </div>
+    <div class="container mt-4">
+        <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel" style="border-radius: 30px; overflow: hidden;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel1.jpg')}}" class="d-block w-100" alt="Slide 1">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Creativo</h5>
-                        <p>Diseños que cobran vida.</p>
-                    </div>
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel1.jpg')}}" class="d-block w-100" alt="...">
+                    <div class="carousel-caption"><h5>Creativo</h5><p>Diseños que cobran vida.</p></div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel2.jpg')}}" class="d-block w-100" alt="Slide 2">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Calidad Garantizada</h5>
-                        <p>Estampados duraderos y profesionales.</p>
-                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="d-block w-100" alt="Slide 3">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Tu Marca Aquí</h5>
-                        <p>Personalizamos tus ideas al mejor precio.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </button>
         </div>
     </div>
 
-
-    <div id="Containerinfo">
-        <h3 id="subtitulodescripcion"> Creativo y Estampados </h3>
-        <p id="parrafodescripcion"> Creativo y estampados es un diseñador en linea gratuito con vista previa en 3d</p>
-        <p id="parrafodescripcion"> en donde podra seleccionar entre variedad de objetos y generar una visualizacion en 3d del mismo </p>
-        <p id="parrafodescripcion"> En el podra agregarle imagenes , colores ah los objetos ha su gusto </p>
-        <div id="containericonos">
-            <div id="containericono1"></div>
-            <div id="containericono2"></div>
-        </div>
+    <div class="container text-center mt-5" id="Containerinfo">
+        <h3 class="fw-bold">Creativo y Estampados</h3>
+        <p class="text-muted">Diseñador en línea gratuito con vista previa 3D en tiempo real.</p>
     </div>
-    <br><br><br>
 
-    <!-- tarjetas de productos -->
-    <div class="container mt-4">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" alt="Producto 1">
-                    <div class="card-body">
-                    <h5 class="card-title">Producto 1</h5>
-                    <p class="card-text">Descripción del producto 1.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" alt="Producto 2">
-                    <div class="card-body">
-                    <h5 class="card-title">Producto 2</h5>
-                    <p class="card-text">Descripción del producto 2.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" alt="Producto 3">
-                    <div class="card-body">
-                    <h5 class="card-title">Producto 3</h5>
-                    <p class="card-text">Descripción del producto 3.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-4">
-                <div class="card h-100">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" alt="Producto 4">
-                    <div class="card-body">
-                    <h5 class="card-title">Producto 4</h5>
-                    <p class="card-text">Descripción del producto 4.</p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
+                <div class="card h-100 shadow-sm border-0" style="border-radius: 20px;">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" style="border-radius: 20px 20px 0 0;">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Camiseta Blanca</h5>
+                        <p>Personaliza tu estilo con nuestro motor 3D.</p>
+                        <a href="/personalizar" class="btn btn-primary px-4" style="background:#7494ec; border:none; border-radius:10px;">Personalizar</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
