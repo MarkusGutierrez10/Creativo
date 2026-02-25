@@ -32,7 +32,7 @@ body {
     height: 2px;
     bottom: -2px;
     left: 50%;
-    background-color: #7494ec;
+    background-color: #26ba45;
     transition: all 0.3s ease;
     transform: translateX(-50%);
 }
@@ -44,11 +44,11 @@ body {
 }
 
 .nav-link.active {
-    color: #7494ec !important;
+    color: #26ba45 !important;
 }
 
 .btn-login-nav {
-    background: #7494ec;
+    background: #26ba45;
     color: white;
     padding: 8px 25px;
     border-radius: 20px;
@@ -58,65 +58,36 @@ body {
 }
 
 .btn-login-nav:hover {
-    background: #5a7bd6;
+    background: #26ba45;
     color: white;
     transform: translateY(-2px);
 }
 
-/* --- CARRUSEL --- */
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
+.nav-link {
+    position: relative;
+    padding: 8px 15px !important;
+    transition: color 0.3s ease;
 }
 
-.carousel-caption {
-    background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    padding: 20px;
-    bottom: 40px;
+/* La línea base */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: #26ba45; /* Color de la línea */
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
 }
 
-.carousel-caption h5 {
-    color: #22b947; /* Título verde como pediste */
+/* Cuando el elemento tiene la clase active, la línea crece */
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: #26ba45 !important;
     font-weight: 600;
-    font-size: 1.8rem;
-}
-
-/* --- SECCIÓN DE CARDS --- */
-.card {
-    transition: transform 0.3s ease;
-    border-radius: 20px;
-    overflow: hidden;
-    height: 100%;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-img-top {
-    height: 250px;      /* Alto fijo */
-    width: 100%;        /* No se sale del ancho */
-    object-fit: cover;  /* Evita que se estire la imagen */
-}
-
-.btn-personalizar {
-    background: #7494ec;
-    border: none;
-    border-radius: 10px;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.btn-personalizar:hover {
-    background: #5a7bd6;
-    color: white;
-}
-
-#Containerinfo {
-    padding: 60px 20px;
 }

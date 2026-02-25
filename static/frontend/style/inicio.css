@@ -1,0 +1,58 @@
+
+/* --- CARRUSEL --- */
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    padding: 20px;
+    bottom: 40px;
+}
+
+.carousel-caption h5 {
+    color: #22b947; /* Título verde como pediste */
+    font-weight: 600;
+    font-size: 1.8rem;
+}
+
+/* --- SECCIÓN DE CARDS --- */
+.card {
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-img-top {
+    height: 250px;      /* Alto fijo */
+    width: 100%;        /* No se sale del ancho */
+    object-fit: cover;  /* Evita que se estire la imagen */
+}
+
+.btn-personalizar {
+    background: #7494ec;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-personalizar:hover {
+    background: #5a7bd6;
+    color: white;
+}
+
+#Containerinfo {
+    padding: 60px 20px;
+}
