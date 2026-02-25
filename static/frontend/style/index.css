@@ -1,35 +1,93 @@
-/* index.css */
+/* Configuración General */
 body {
-    background: #f8f9fa; /* Fondo gris claro suave */
+    background: #f8f9fa;
     font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
-/* Navbar Cápsula */
+/* --- NAVBAR ESTILO CÁPSULA --- */
 .menu-capsula {
     background: white;
     padding: 10px 30px;
     border-radius: 50px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
 }
 
-.nav-link { color: #333 !important; font-weight: 500; }
-.nav-link.active { color: #7494ec !important; }
+.nav-link { 
+    color: #333 !important; 
+    font-weight: 500; 
+    position: relative; /* Necesario para la línea */
+    padding: 5px 10px;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+/* La línea que aparece debajo */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: #26ba45;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* Estado activo y hover: la línea crece desde el centro */
+.nav-link.active::after,
+.nav-link:hover::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: #26ba45 !important;
+}
 
 .btn-login-nav {
-    background: #7494ec;
+    background: #26ba45;
     color: white;
     padding: 8px 25px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
+    transition: 0.3s;
 }
 
-/* Carrusel con bordes redondeados */
-.carousel-item img {
-    height: 500px;
-    object-fit: cover;
+.btn-login-nav:hover {
+    background: #26ba45;
+    color: white;
+    transform: translateY(-2px);
 }
 
-#Containerinfo {
-    padding: 60px 20px;
+.nav-link {
+    position: relative;
+    padding: 8px 15px !important;
+    transition: color 0.3s ease;
+}
+
+/* La línea base */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    background-color: #26ba45; /* Color de la línea */
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* Cuando el elemento tiene la clase active, la línea crece */
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link.active {
+    color: #26ba45 !important;
+    font-weight: 600;
 }

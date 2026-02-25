@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creativo | Inicio</title>
+    <title>Creativo</title>
+    <link rel="icon" href="{{url_for('static', filename='frontend/img/logo_negro.png')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="{{url_for('static', filename='frontend/style/index.css')}}">
@@ -13,14 +14,27 @@
 
     <nav class="navbar navbar-expand-lg mt-3">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" height="50"></a>
+            <a class="navbar-brand" href="/">
+                <img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="menu-capsula mx-auto d-lg-flex align-items-center">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Personalizaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
+                <div class="menu-capsula mx-auto d-lg-flex align-items-center position-relative">
+                    <ul class="navbar-nav" id="nav-main">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#" onclick="menuInicio(this)">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="menuPersonalizaciones(this)">Personalizaciones</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" onclick="vistaMenuContacto(this)">Contacto</a>
+                        </li>
                     </ul>
                     <div class="d-flex align-items-center ms-lg-3 gap-2">
                         <a href="/login" class="btn-login-nav">Login</a>
@@ -30,37 +44,20 @@
         </div>
     </nav>
 
-    <div class="container mt-4">
-        <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel" style="border-radius: 30px; overflow: hidden;">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel1.jpg')}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption"><h5>Creativo</h5><p>Diseños que cobran vida.</p></div>
-                </div>
-                </div>
+    <main>
+        <div id="vistaMenuInicio">
+            {% include 'view/public/inicio.html' %}
         </div>
-    </div>
-
-    <div class="container text-center mt-5" id="Containerinfo">
-        <h3 class="fw-bold">Creativo y Estampados</h3>
-        <p class="text-muted">Diseñador en línea gratuito con vista previa 3D en tiempo real.</p>
-    </div>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm border-0" style="border-radius: 20px;">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" style="border-radius: 20px 20px 0 0;">
-                    <div class="card-body text-center">
-                        <h5 class="fw-bold">Camiseta Blanca</h5>
-                        <p>Personaliza tu estilo con nuestro motor 3D.</p>
-                        <a href="/personalizar" class="btn btn-primary px-4" style="background:#7494ec; border:none; border-radius:10px;">Personalizar</a>
-                    </div>
-                </div>
-            </div>
+        
+        <div id="vistaMenuPersonalizaciones" style="display: none;">
+            {% include 'view/public/personalizaciones.html' %}
         </div>
-    </div>
+        <div id="vistaMenuContacto" style="display: none;">
+            {% include 'view/public/contacto.html' %}
+        </div>
+    </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{url_for('static', filename='backend/javascript/index.js')}}"></script>
 </body>
 </html>

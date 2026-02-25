@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | Creativo</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='frontend/style/contacto.css') }}">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="hero-section text-center">
+        <h1 class="fw-bold">Hablemos de tu <span style="color: #22b947;">Proyecto.</span></h1>
+        <p class="text-muted fs-5">Personalización premium y asesoría directa para tu marca.</p>
+    </div>
+
+    <div class="row g-5 mb-5">
+        <div class="col-lg-5">
+            <div class="contact-info-card shadow-sm">
+                <h4 class="fw-bold mb-4">Canales Directos</h4>
+                
+                <a href="https://wa.me/573016118696" target="_blank" class="contact-item">
+                    <div class="icon-circle whatsapp-bg">
+                        <i class='bx bxl-whatsapp'></i>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">WhatsApp</p>
+                        <span class="text-muted">+57 301 611 8696</span>
+                    </div>
+                </a>
+
+                <div class="contact-item mt-4">
+                    <div class="icon-circle location-bg">
+                        <i class='bx bx-map'></i>
+                    </div>
+                    <div>
+                        <p class="mb-0 fw-bold">Ubicación</p>
+                        <span class="text-muted">Barranquilla, Colombia</span>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <h5 class="fw-bold mb-3">Síguenos en Redes</h5>
+                <div class="d-flex flex-column gap-3">
+                    <a href="https://www.instagram.com/creativo_55?igsh=MXBmeWJzd3NnbXNreA==" target="_blank" class="social-button instagram">
+                        <i class='bx bxl-instagram'></i>
+                        <span>Instagram (@creativo_55)</span>
+                    </a>
+
+                    <a href="https://www.facebook.com/share/187daUaLBe/" target="_blank" class="social-button facebook">
+                        <i class='bx bxl-facebook-circle'></i>
+                        <span>Facebook</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="form-card shadow-sm">
+                <h4 class="fw-bold mb-4">Envíanos un mensaje</h4>
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold">Nombre</label>
+                            <input type="text" class="form-control custom-input" placeholder="Tu nombre">
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold">Correo</label>
+                            <input type="email" class="form-control custom-input" placeholder="tu@correo.com">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold">¿Qué necesitas?</label>
+                        <select class="form-select custom-input">
+                            <option>Camisetas Personalizadas</option>
+                            <option>Hoodies / Buzos</option>
+                            <option>Gorras</option>
+                            <option>Dotación Empresarial</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label small fw-bold">Tu Mensaje</label>
+                        <textarea class="form-control custom-input" rows="4" placeholder="Cuéntanos los detalles de tu diseño..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-dark w-100 py-3 fw-bold btn-submit">
+                        Enviar Solicitud
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
