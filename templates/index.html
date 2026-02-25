@@ -33,7 +33,7 @@
                             <a class="nav-link" href="#">Tienda</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#" onclick="vistaMenuContacto(this)">Contacto</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center ms-lg-3 gap-2">
@@ -51,6 +51,9 @@
         
         <div id="vistaMenuPersonalizaciones" style="display: none;">
             {% include 'view/public/personalizaciones.html' %}
+        </div>
+        <div id="vistaMenuContacto" style="display: none;">
+            {% include 'view/public/contacto.html' %}
         </div>
     </main>
 
