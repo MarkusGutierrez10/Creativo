@@ -1,14 +1,12 @@
 <link rel="stylesheet" href="{{url_for('static', filename='frontend/style/inicio.css')}}">
 
 <div class="container mt-4">
-    <div class="container">
-        <div class="hero-section text-center">
-            <h1 class="fw-bold">Diseña tu <span style="color: #22b947;">Propia Marca.</span></h1>
-            <p class="text-muted fs-5">Estampados premium con visualización 3D en tiempo real.</p>
-        </div>
+    <div class="hero-section text-center">
+        <h1 class="fw-bold">Diseña tu <span style="color: #22b947;">Propia Marca.</span></h1>
+        <p class="text-muted fs-5">Estampados premium con visualización 3D en tiempo real.</p>
     </div>
 
-    <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel" data-bs-interval="3000" style="border-radius: 30px; overflow: hidden;">
+    <div id="carouselExample" class="carousel slide shadow-lg mb-5" data-bs-ride="carousel" data-bs-interval="3000" style="border-radius: 30px; overflow: hidden;">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
             <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
@@ -40,71 +38,77 @@
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
             <span class="carousel-control-prev-icon"></span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide-to="next">
             <span class="carousel-control-next-icon"></span>
         </button>
     </div>
-</div>
 
-<div class="container text-center mt-5" id="Containerinfo">
-    <h3 class="fw-bold">Nuestros Productos</h3>
-    <p class="text-muted">3 imágenes al lado de otra y tamaño controlado.</p>
-</div>
+    <div class="contenedor3D shadow-lg mb-5">
+        <div class="appbar-title">
+            <img src="{{url_for('static', filename='frontend/img/logo_blanco.png')}}" alt="Logo" class="appbar-logo">
+            <h1>Tu Estilo Empieza Aquí</h1>
+        </div>
+        
+        <div class="row p-4 justify-content-center">
+            <div class="col-md-5 mb-4">
+                <div class="card card-3d-especial border-0 shadow-sm">
+                    <div class="badge-new">NUEVO 3D</div>
+                    <img src="{{url_for('static', filename='frontend/img/Camisa.png')}}" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Diseño Infinito 3D</h5> 
+                        <p class="text-muted small">Toma el control total y diseña cada detalle de tu prenda en tiempo real con nuestra tecnología de vanguardia.</p>
+                        <a href="/personalizar" class="btn-personalizar w-100">Personalizar ahora</a>
+                    </div>
+                </div>
+            </div>
 
-<div class="container mb-5">
+            <div class="col-md-5 mb-4">
+                <div class="card card-3d-especial border-0 shadow-sm">
+                    <div class="badge-new">NUEVO 3D</div>
+                    <img src="{{url_for('static', filename='frontend/img/Carro.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Explora en 3D</h5> 
+                        <p class="text-muted small">Visualiza tus ideas desde cualquier ángulo con un realismo asombroso antes de crear tu marca.</p>
+                        <a href="/personalizar" class="btn-personalizar w-100">Personalizar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5" id="Containerinfo">
+        <h3 class="fw-bold">Nuestros Productos</h3>
+        <p class="text-muted">Calidad premium para tu marca.</p>
+    </div>
+
     <div class="row">
-            
-    <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card shadow-sm border-0">
-            <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
-            <div class="card-body text-center d-flex flex-column">
-                <h5 class="fw-bold">Camiseta Blanca</h5>
-                <p class="text-muted small">Personaliza tu estilo con nuestro motor 3D.</p>
-                <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-        <div class="card shadow-sm border-0">
-            <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
-            <div class="card-body text-center d-flex flex-column">
-                <h5 class="fw-bold">Camiseta Negra</h5>
-                <p class="text-muted small">Elegancia y calidad en un solo producto.</p>
-                <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
-            </div>
-        </div>
-    </div>
-
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card shadow-sm border-0">
                 <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
-                <div class="card-body text-center d-flex flex-column">
+                <div class="card-body text-center">
                     <h5 class="fw-bold">Saco con Capucha</h5>
-                    <p class="text-muted small">Ideal para climas fríos y diseños grandes.</p>
-                    <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    <p class="text-muted small">Ideal para climas fríos.</p>
+                    <a href="/personalizar" class="btn-personalizar">Personalizar</a>
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card shadow-sm border-0">
                 <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
-                <div class="card-body text-center d-flex flex-column">
+                <div class="card-body text-center">
                     <h5 class="fw-bold">Gorra Ajustable</h5>
-                    <p class="text-muted small">El accesorio perfecto para tu marca.</p>
-                    <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    <p class="text-muted small">El accesorio perfecto.</p>
+                    <a href="/personalizar" class="btn-personalizar">Personalizar</a>
                 </div>
             </div>
         </div>
-
         <div class="col-lg-4 col-md-6 mb-4">
             <div class="card shadow-sm border-0">
                 <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
-                <div class="card-body text-center d-flex flex-column">
+                <div class="card-body text-center">
                     <h5 class="fw-bold">Tote Bag</h5>
-                    <p class="text-muted small">Ecológica y 100% personalizable.</p>
-                    <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    <p class="text-muted small">Ecológica y resistente.</p>
+                    <a href="/personalizar" class="btn-personalizar">Personalizar</a>
                 </div>
             </div>
         </div>

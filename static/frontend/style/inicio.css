@@ -1,46 +1,39 @@
-.hero-section {
-    background: #ffffff; /* Fondo blanco puro para limpieza */
-    padding: 80px 20px;
-    border-radius: 40px;
-    margin: 40px 0;
-    /* Una sombra muy sutil para dar profundidad sin que se vea cargado */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); 
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
 }
 
-.hero-section h1 {
-    font-size: 3.5rem; /* Tamaño grande y moderno */
-    font-weight: 800;
-    color: #000000;
-    letter-spacing: -1.5px; /* Estilo tipográfico premium */
-    margin-bottom: 15px;
-}
-
-.hero-section p {
-    color: #6c757d; /* Gris suave para que no compita con el título */
-    max-width: 600px;
-    margin: 0 auto;
-    font-weight: 300;
-}
-
-/* Opcional: Responsive para móviles */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.2rem;
-    }
-}
-
-/* Seccion de Bienvenida (Hero) */
 .hero-section {
     background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
                 url('/static/frontend/img/logo_negro.png');
     background-size: cover;
     background-position: center;
-    padding: 80px 0;
+    padding: 80px 20px;
     border-radius: 30px;
-    margin-bottom: 50px;
+    margin: 40px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Carrusel */
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #000000;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+.hero-section p {
+    color: #6c757d;
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .hero-section h1 { font-size: 2.2rem; }
+}
+
 .carousel-item img {
     height: 500px;
     object-fit: cover;
@@ -57,19 +50,50 @@
 }
 
 .carousel-caption h5 {
-    color: #22b947; /* Verde Neón de tu logo */
+    color: #22b947;
     font-weight: 700;
     font-size: 2rem;
     text-transform: uppercase;
 }
 
-/* Estilo de las Cards */
+.contenedor3D {
+    background-color: #ffffff;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 50px;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.appbar-title {
+    display: flex;
+    align-items: center;
+    background: #000000;
+    color: white;
+    padding: 20px 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.appbar-logo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+    object-fit: contain;
+}
+
+.appbar-title h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
 .card {
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border-radius: 25px;
+    border-radius: 25px !important;
     overflow: hidden;
-    height: 100%;
     border: none !important;
+    background: #fff;
 }
 
 .card:hover {
@@ -87,24 +111,109 @@
     transform: scale(1.1);
 }
 
-/* Botón Personalizar (Consistente con la marca) */
+.badge-new {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #22b947;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 0.7rem;
+    z-index: 10;
+}
+
 .btn-personalizar {
-    background: #000;
+    display: inline-block;
+    background: #000000;
     color: white;
-    border-radius: 12px;
     padding: 12px 25px;
+    border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
     transition: 0.3s;
     text-align: center;
+    border: none;
 }
 
 .btn-personalizar:hover {
     background: #22b947;
-    color: #000;
+    color: #000000;
     box-shadow: 0 5px 15px rgba(34, 185, 71, 0.4);
 }
 
 #Containerinfo {
-    padding: 40px 20px;
+    padding: 60px 20px 20px 20px;
+}
+
+.contenedor3D {
+    border-radius: 25px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.appbar-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #22b947, #000000);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    position: relative;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.appbar-logo {
+    height: 50px;
+    filter: drop-shadow(0 0 8px rgba(34, 185, 71, 0.6));
+    margin-right: 20px;
+    transition: transform 0.4s;
+}
+
+.contenedor3D:hover .appbar-logo {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.appbar-title h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 0;
+    
+    background: linear-gradient(to bottom, #ffffff 30%, #22b947 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+    position: relative;
+}
+
+.appbar-title h1::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: #22b947;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+}
+
+.contenedor3D:hover h1::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .appbar-title h1 { font-size: 1.5rem; }
+    .appbar-logo { height: 35px; }
 }
