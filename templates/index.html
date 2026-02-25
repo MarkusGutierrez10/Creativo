@@ -13,12 +13,17 @@
 
     <nav class="navbar navbar-expand-lg mt-3">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" height="50"></a>
+            <a class="navbar-brand" href="#">
+                <img src="{{url_for('static', filename='frontend/img/logo_negro.png')}}" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="menu-capsula mx-auto d-lg-flex align-items-center">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link active" href="/">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="">Personalizaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Personalizaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Tienda</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Contacto</a></li>
                     </ul>
@@ -31,36 +36,107 @@
     </nav>
 
     <div class="container mt-4">
-        <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel" style="border-radius: 30px; overflow: hidden;">
+        <div id="carouselExample" class="carousel slide shadow-lg" data-bs-ride="carousel" data-bs-interval="3000" style="border-radius: 30px; overflow: hidden;">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+            </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel1.jpg')}}" class="d-block w-100" alt="...">
-                    <div class="carousel-caption"><h5>Creativo</h5><p>Diseños que cobran vida.</p></div>
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel1.jpg')}}" class="d-block w-100" alt="Slide 1">
+                    <div class="carousel-caption">
+                        <h5>Creativo</h5>
+                        <p>Diseños que cobran vida en 3D.</p>
+                    </div>
                 </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel2.jpg')}}" class="d-block w-100" alt="Slide 2">
+                    <div class="carousel-caption">
+                        <h5>Tu Estilo Único</h5>
+                        <p>Personaliza prendas con facilidad.</p>
+                    </div>
                 </div>
+                <div class="carousel-item">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="d-block w-100" alt="Slide 3">
+                    <div class="carousel-caption">
+                        <h5>Calidad Garantizada</h5>
+                        <p>Estampados resistentes y duraderos.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
         </div>
     </div>
 
     <div class="container text-center mt-5" id="Containerinfo">
-        <h3 class="fw-bold">Creativo y Estampados</h3>
-        <p class="text-muted">Diseñador en línea gratuito con vista previa 3D en tiempo real.</p>
+        <h3 class="fw-bold">Nuestros Productos</h3>
+        <p class="text-muted">3 imágenes al lado de otra y tamaño controlado.</p>
     </div>
 
-    <div class="container mt-5">
+    <div class="container mb-5">
         <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 shadow-sm border-0" style="border-radius: 20px;">
-                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top" style="border-radius: 20px 20px 0 0;">
-                    <div class="card-body text-center">
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center d-flex flex-column">
                         <h5 class="fw-bold">Camiseta Blanca</h5>
-                        <p>Personaliza tu estilo con nuestro motor 3D.</p>
-                        <a href="/personalizar" class="btn btn-primary px-4" style="background:#7494ec; border:none; border-radius:10px;">Personalizar</a>
+                        <p class="text-muted small">Personaliza tu estilo con nuestro motor 3D.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold">Camiseta Negra</h5>
+                        <p class="text-muted small">Elegancia y calidad en un solo producto.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold">Saco con Capucha</h5>
+                        <p class="text-muted small">Ideal para climas fríos y diseños grandes.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold">Gorra Ajustable</h5>
+                        <p class="text-muted small">El accesorio perfecto para tu marca.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0">
+                    <img src="{{url_for('static', filename='frontend/img/imgCarrusel3.jpg')}}" class="card-img-top">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold">Tote Bag</h5>
+                        <p class="text-muted small">Ecológica y 100% personalizable.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div> </div> <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
