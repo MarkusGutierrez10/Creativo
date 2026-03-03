@@ -1,1 +1,95 @@
-<h2>hola</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalizaciones | Creativo</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='frontend/style/personalizacion.css')}}">
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="container">
+        <div class="hero-section text-center mb-5">
+            <h1 class="fw-bold">Nuestros Productos <span style="color: #22b947;">Personalizables.</span></h1>
+            <p class="text-muted fs-5">Complementa tu marca con talento y creatividad en cada prenda.</p>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row g-4">
+            
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Camiseta Premium">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Camisa</h5>
+                        <p class="text-muted small flex-grow-1">Material confortable de máxima calidad. Perfecta para diseños detallados y duraderos.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Sudadera con Capucha">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Buso</h5>
+                        <p class="text-muted small flex-grow-1">Ideal para climas fríos. Diseña tu buso con estampados de gran tamaño.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Gorra Ajustable">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Gorra</h5>
+                        <p class="text-muted small flex-grow-1">El accesorio perfecto para tu marca. Personaliza tu logotipo con precisión.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Polo Elegante">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Motos</h5>
+                        <p class="text-muted small flex-grow-1">Profesional y elegante. Perfecto para equipos corporativos y eventos.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Chamarra Deportiva">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Chamarra Deportiva</h5>
+                        <p class="text-muted small flex-grow-1">Resistente y moderna. Excelente para marcas sportivas y equipos.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="{{url_for('static', filename='frontend/img/tienda/camisa.jpg')}}" class="card-img-top" alt="Bolsa Personalizada">
+                    <div class="card-body text-center d-flex flex-column">
+                        <h5 class="fw-bold mb-2">Bolsa Personalizada</h5>
+                        <p class="text-muted small flex-grow-1">Práctica y promocional. Difunde tu marca con estilo en cada compra.</p>
+                        <a href="/personalizar" class="btn-personalizar mt-auto">Personalizar</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
