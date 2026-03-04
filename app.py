@@ -6,11 +6,11 @@ app = Flask(__name__)
 def index():
     return render_template("login.html")
 
-@app.route("/<url>")
-def redirigir(url):
+@app.route('/view/<path:ruta_template>')
+def redirigir(ruta_template):
     try:
-        return render_template(f"view/{url}.html")
-    except:
+        return render_template(f'{ruta_template}.html')
+    except jinja2.exceptions.TemplateNotFound:
         abort(404)
 
 if __name__ == "__main__":
